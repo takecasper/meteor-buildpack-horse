@@ -19,7 +19,7 @@ get_node_major_version() {
 }
 get_latest_release() {
     # Get latest release tag from GitHub api
-    curl --silent --write-out "%{http_code}" "https://api.github.com/repos/heroku/heroku-nodejs-plugin/releases/latest" |
+    curl --silent --write-out "%{http_code}" "https://api.github.com/repos/heroku/heroku-nodejs-plugin/releases/v7" |
         grep '"tag_name":' |
         sed -E 's/.*"([^"]+)".*/\1/'
 }
